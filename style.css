@@ -33,8 +33,9 @@ body, html {
     }
     #button{
         visibility: visible;
+        font-size: 20px;
         background-color: limegreen;
-        border-radius: inherit;
+        border-radius: 25px;
     }
 }
 
