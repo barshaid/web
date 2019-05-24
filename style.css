@@ -13,6 +13,7 @@ body, html {
     z-index: -1;
 }
 
+
 @media screen and (min-width: 700px) {
     #iform {
         border: transparent;
@@ -115,4 +116,9 @@ footer {
 
 a {
     color: white;
+}
+
+textarea {
+    display:block;
+    margin:1em 0;
 }

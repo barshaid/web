@@ -6,8 +6,9 @@
     <title>Registration Form</title>
     <link rel="stylesheet" href="bootstrap.css">
     <link rel="stylesheet" href="style.css">
+    <script src="indexJS.js"></script>
 </head>
-<body>
+<body onload="count()">
 <form class="form-horizontal">
     <fieldset>
 
@@ -16,23 +17,38 @@
         <div class="form-group">
             <label class="col-md-4 control-label">Full Name</label>
             <div class="col-md-4">
-                <input name="txtinput" type="text" placeholder="" class="form-control input-md" required="">
+                <input name="name"
+                       pattern="[A-Za-z]{1,}[\s]{1}[A-Za-z]{1,}"
+                       title="Name cannot contain digits or part of the either first or last name missing"
+                       type="text"
+                       placeholder=""
+                       class="form-control input-md"
+                       required="">
             </div>
         </div>
 
         <div class="form-group">
             <label class="col-md-4 control-label">Email</label>
             <div class="col-md-4">
-                <input name="textinput" type="text" placeholder="" class="form-control input-md">
+                <input type="text"
+                       name="email"
+                       pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,4}$"
+                       Title="Invalid email address"
+                       placeholder=""
+                       class="form-control input-md"
+                       required="">
 
             </div>
         </div>
 
-
         <div class="form-group">
             <label class="col-md-4 control-label">Phone</label>
             <div class="col-md-4">
-                <input name="textinput" type="text" placeholder="" class="form-control input-md">
+                <input type="text"
+                       pattern="[0-9]{9,10}"
+                       placeholder=""
+                       class="form-control input-md"
+                       required="">
 
             </div>
         </div>
@@ -40,7 +56,7 @@
         <div class="form-group">
             <label class="col-md-4 control-label">Spectator guests</label>
             <div class="col-md-4">
-                <select name="selectbasic" class="form-control">
+                <select class="form-control">
                     <option value="0">0</option>
                     <option value="1">1</option>
                     <option value="2">2</option>
@@ -78,16 +94,22 @@
         </div>
 
         <div class="form-group">
-            <label class="col-md-4 control-label" for="textarea">Additional information</label>
+            <label class="col-md-4 control-label">Additional information</label>
             <div class="col-md-4">
-                <textarea class="form-control" id="textarea" name="textarea"></textarea>
+                <textarea class="form-control"
+                          maxlength="200"
+
+                          id="textarea"
+                          name="textarea"
+                          placeholder=""></textarea>
+                <span id="chars">200</span> characters remaining
             </div>
         </div>
 
         <div class="form-group">
             <label class="col-md-4 control-label"></label>
             <div class="col-md-4">
-                <button name="singlebutton" class="btn btn-primary">SEND</button>
+                <input type="submit" value="SEND">
             </div>
         </div>
     </fieldset>
