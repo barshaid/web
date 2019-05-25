@@ -13,6 +13,17 @@ body, html {
     z-index: -1;
 }
 
+.carousel-control-prev{
+    position: fixed;
+    height: 220px;
+}
+
+.carousel-control-next{
+    position: fixed;
+    right: 0;
+    height: 220px;
+}
+
 
 @media screen and (min-width: 700px) {
     #iform {
