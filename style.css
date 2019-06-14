@@ -2,6 +2,22 @@ body, html {
     height: 100%
 }
 
+#date{
+    position:absolute;
+    left:0;
+    top:0;
+    font-size: xx-large;
+    text-align: center;
+}
+
+#countdown{
+    position:absolute;
+    right:0;
+    top:0;
+    font-size: xx-large;
+    text-align: center;
+}
+
 .bg {
     height: 90%;
     background: url("https://i.imgur.com/GIZ64F7.png");
@@ -14,12 +30,12 @@ body, html {
 }
 
 .carousel-control-prev{
-    position: fixed;
+    position: absolute;
     height: 220px;
 }
 
 .carousel-control-next{
-    position: fixed;
+    position: absolute;
     right: 0;
     height: 220px;
 }
@@ -42,6 +58,9 @@ body, html {
 @media screen and (max-width: 699px) {
     #iform {
         visibility: hidden;
+        width: 0;
+        height: 0;
+        resize: both;
     }
     #button{
         visibility: visible;
@@ -53,13 +72,13 @@ body, html {
 
 footer {
     position: fixed;
-    height: auto;
+    height: 66px;
     bottom: 0;
     width: 100%;
 }
 
 .scrollcont {
-    height: 100%;
+    height: calc(100% - 66px);
     overflow-y: scroll;
     width: 100%;
 }

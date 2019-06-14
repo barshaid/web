@@ -26,7 +26,5 @@ function count() {
     };
 
 }
-function goodbye() {
-    window.alert("Bye-bye!");
-}
+
 
